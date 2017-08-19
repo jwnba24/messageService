@@ -3,13 +3,18 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 	<!-- 接口的具体实现类 -->  
-    <bean id="impl" class="com.demo.service.impl.ProviderServiceImpl" />  
     <!-- 使用Spring的HessianServie做代理 -->  
-    <bean name="/helloSpring"  
+    <bean name="/providerService"  
     class="org.springframework.remoting.caucho.HessianServiceExporter">  
         <!-- service引用具体的实现实体Bean-->  
-        <property name="service" ref="impl" />  
+        <property name="service" ref="providerService" />  
         <property name="serviceInterface" value="com.demo.service.ProviderService" />  
     </bean>  
+     <bean name="/consumerService"  
+    class="org.springframework.remoting.caucho.HessianServiceExporter">  
+        <!-- service引用具体的实现实体Bean-->  
+        <property name="service" ref="consumerService" />  
+        <property name="serviceInterface" value="com.demo.service.ConsumerService" />  
+    </bean> 
 
 </beans>

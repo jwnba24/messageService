@@ -1,2 +1,6 @@
-com\demo\service\impl\ProviderServiceImpl.class
 com\demo\service\ProviderService.class
+com\demo\service\impl\ConsumerServiceImpl.class
+com\demo\service\ConsumerService.class
+com\demo\test\Test.class
+com\demo\service\impl\ProviderServiceImpl.class
+com\demo\service\impl\ProviderServiceImpl$1.class
