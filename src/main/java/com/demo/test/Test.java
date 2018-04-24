@@ -15,6 +15,7 @@ public class Test {
 		ConsumerService consumerService=(ConsumerService) applicationContext.getBean("consumerService");
 		String result=consumerService.receiveMessage();
 		System.out.println(result);
+		System.out.println(123);
 	}
 	
 }
